@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Water Wave Effects</title>
+</head>
+<body>
+    <section>
+        <div class="wave" id="wave1" style="--i:1;"></div>
+        <div class="wave" id="wave2" style="--i:2;"></div>
+        <div class="wave" id="wave3" style="--i:3;"></div>
+        <div class="wave" id="wave4" style="--i:4;"></div>
+    </section>
+    <div class="sec">
+        <h2>Animated Parallax Water Wave Effects</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et atque recusandae debitis deserunt optio ad, molestias quaerat, labore ipsa enim alias distinctio hic aperiam aliquam sunt id natus unde sapiente praesentium quo, obcaecati magni asperiores quisquam! Quae soluta fugit molestias obcaecati eos aspernatur, enim sapiente dolorum cumque dolorem assumenda repudiandae? <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est, harum, laboriosam accusamus, dolorem atque esse eligendi deleniti consequatur distinctio quis? Soluta necessitatibus beatae blanditiis. Ea dolor molestiae aspernatur molestias odio fuga non deserunt perferendis iste qui aliquid ipsam autem doloremque minus, quibusdam, possimus alias sed impedit atque veniam asperiores!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id delectus magni quasi, distinctio sit ipsum excepturi unde veniam facere inventore dignissimos eligendi exercitationem enim, nemo eaque! Sequi totam, quam a cum libero inventore vitae laudantium. Omnis cupiditate illum id ex eaque quo perferendis, officia voluptas laboriosam recusandae atque eligendi facere!<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe minima aut suscipit harum beatae repellat error dolorem cumque illum laudantium, esse modi dicta ipsum sequi iure qui pariatur iste atque explicabo? Voluptatum, adipisci inventore enim deserunt quam nulla nobis voluptates suscipit eligendi ullam voluptas neque, cum temporibus maxime aperiam. Laudantium!</p>
+    </div>
+
+    <script>
+        let wave1 = document.getElementById('wave1');
+        let wave2 = document.getElementById('wave2');
+        let wave3 = document.getElementById('wave3');
+        let wave4 = document.getElementById('wave4');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+            wave1.style.backgroundPositionX = 400 + value * 4 + 'px';
+            wave2.style.backgroundPositionX = 300 + value * -4 + 'px';
+            wave3.style.backgroundPositionX = 200 + value * 2 + 'px';
+            wave4.style.backgroundPositionX = 100 + value * -2 + 'px';
+        })
+    </script>
+</body>
+</html>
